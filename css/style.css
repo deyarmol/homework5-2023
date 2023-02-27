@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* step 1 */
+@keyframes logomove {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+    to {
+      width:475px;
+      opacity: 1;
+    }
+  }
+
+#logo{
+  animation: logomove 5s;
+  width: 475px;
+  opacity: 1;
+}
+
+/* step 2 */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    background-image: url("../images/concrete_seamless.png");
+}
+
+/* step 3 */
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+}
+
+/* step 4 */
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* step 5 */
+
+a:visited {
+    padding: 10px;
+    color: blue;
+}
+
+/* step 6 */
+
+.card > header {
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px 50px 0px 0px;
+    flex-direction: column;
+}
+
+/* step 7 */
+
+.card {
+    flex-basis: 450px;
+    max-width: 450px;
+    align-self: center;
+    border-radius: 50px 50px 0px 0px;
+    flex-direction: column;
+    display: flex;
+}
+
+/* step 8 */
+
+.pricing {
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* step 9 */
+
+.gallery > img {
+    border: solid 10px #50c7c7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* step 10 */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* step 11 */
+
+@media screen and (min-width: 900px) {
+    header {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .nav_links {
+        flex-direction: row;
+    }
+
+    /* step 12 */
+
+    .pricing{
+      flex-basis: 275px;
+    }
+
+    .card {
+      flex-basis: 275px;
+    }
+
+    /* step 13 */
+
+    body > header {
+      position: sticky;
+      top: 0;
+    }
+}
+
+/* step 14 */
+
+@media (prefers-reduced-motion) {
+  #logo {
+    animation: none; 
+  }
+}
+
+/* step 15/16 */
+
+@media print { 
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    /* step 17 */
+
+    nav {
+        display: block;
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%
+    }
+
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* step 18 */
+
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end; /* no matter what i did or changed in 
+                                  inspect element, i couldn't get these
+                                  properties to affect the items. so, 
+                                  this part is only changed in .card.
+                                  hope that's ok */
+    }
+
+    /* step 19 */
+
+    .card{
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+        align-self: flex-end;
+    }
+
+    /* step 20 */
+
+    .gallery, #gallery {
+        display: none;
+    }
+
+    /* step 21 */
+
+    .card > ul > li:nth-child(2):after{
+        content: "👍";
+    }
+
+}
